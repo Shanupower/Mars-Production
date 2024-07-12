@@ -6,6 +6,8 @@ import PartnerTestimonial from "./PartnerTestimonial";
 import Upcoming from "./Upcoming";
 import HowWeWork from "./HowWeWork";
 import Footer from "../common/Footer";
+import GlobeImge1 from "../../assests/mars_texture.jpg";
+
 const Home = () => {
   const [rotation, setRotation] = useState([0, 0]); // Initial rotation (longitude, latitude)
   const globeEl = useRef(null);
@@ -31,7 +33,14 @@ const Home = () => {
   return (<>
     <div className="home-wrapper">
       <div className="home-globe">
-        <Globe height={300} width={300} />
+        <Globe height={800} width={800
+          
+        } 
+         backgroundColor="rgba(0,0,0,0)"
+        atmosphereColor="transparent"
+        globeImageUrl={GlobeImge1}
+        
+        />
       </div>
       <div>
         <Carosual />
